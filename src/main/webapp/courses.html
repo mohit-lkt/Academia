@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script type="text/javascript">
+        jQuery.fn.multiselect = function() {
+            $(this).each(function() {
+                var checkboxes = $(this).find("input:checkbox");
+                checkboxes.each(function() {
+                    var checkbox = $(this);
+                    // Highlight pre-selected checkboxes
+                    if (checkbox.prop("checked"))
+                        checkbox.parent().addClass("multiselect-on");
+
+                    // Highlight checkboxes that the user selects
+                    checkbox.click(function() {
+                        if (checkbox.prop("checked"))
+                            checkbox.parent().addClass("multiselect-on");
+                        else
+                            checkbox.parent().removeClass("multiselect-on");
+                    });
+                });
+            });
+        };
+    </script>
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/css/courses.css" rel="stylesheet">
+</head>
+<body>
+<div class="container">
+<div class="div1">
+    <img src="assets/images/iiitb_logo100x95.png" alt="Admin"><br><br>
+    <h2>Academic ERP</h2>
+    <p class="lead">Choose Courses</p>
+</div>
+    <form id = "selectCourses" novalidate>
+<div class="multiselect" >
+    <label>&nbsp;<input class="messageCheckbox"  type="checkbox" name="option[]" value="1" /> Algorithms</label><br>
+    <label>&nbsp;<input class="messageCheckbox"  type="checkbox" name="option[]" value="2" /> Advanced Algorithm</label><br>
+    <label>&nbsp;<input class="messageCheckbox" type="checkbox" name="option[]" value="3" /> Software Systems</label><br>
+    <label>&nbsp;<input class="messageCheckbox" type="checkbox" name="option[]" value="4" /> Computational Sustainability</label><br>
+    <label>&nbsp;<input class="messageCheckbox" type="checkbox" name="option[]" value="5" /> MML</label><br>
+    <label>&nbsp;<input class="messageCheckbox" type="checkbox" name="option[]" value="6" /> IOT</label><br>
+    <label>&nbsp;<input class="messageCheckbox" type="checkbox" name="option[]" value="7" /> Foundations of Cryptography</label>
+</div>
+
+    <br>
+    <button class="btn btn-primary btn-lg btn-block" type="submit" id="btn" style="margin-left: 40.5%; height:3em;margin-right:30%">Submit Details</button>
+    </form>
+</div>
+</body>
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+<script src="assets/js/SelectCourse.js"></script>
+</html>

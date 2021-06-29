@@ -1,0 +1,30 @@
+.div1{
+    text-align: center;
+    margin-top: 45px;
+}
+.multiselect {
+    width:20em;
+    height:15em;
+    border:solid 3px #c0c0c0;
+    border-color: #007bff;
+    overflow:auto;
+    margin-right: 30%;
+    margin-left: 35%;
+}
+
+.multiselect label {
+    display:block;
+}
+
+.multiselect-on {
+    color:#ffffff;
+    background-color:#000099;
+}
+
+#btn {
+    width: 10em;
+
+
+}
+
+
